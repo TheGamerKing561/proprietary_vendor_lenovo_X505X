@@ -18,8 +18,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lenovo/X505X
 
 PRODUCT_COPY_FILES += \
-    vendor/lenovo/X505X/proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk:$(TARGET_COPY_OUT_PRODUCT)/app/PowerOffAlarm/PowerOffAlarm.apk \
-    vendor/lenovo/X505X/proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk:$(TARGET_COPY_OUT_PRODUCT)/app/QtiTelephonyService/QtiTelephonyService.apk \
     vendor/lenovo/X505X/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
     vendor/lenovo/X505X/proprietary/product/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/dpm/dpm.conf \
     vendor/lenovo/X505X/proprietary/product/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
@@ -252,8 +250,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/X505X/proprietary/product/lib64/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.1.so \
     vendor/lenovo/X505X/proprietary/product/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.latency@2.0.so \
     vendor/lenovo/X505X/proprietary/product/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.voiceprint@1.0.so \
-    vendor/lenovo/X505X/proprietary/product/priv-app/ims/ims.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ims/ims.apk \
-    vendor/lenovo/X505X/proprietary/product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk \
     vendor/lenovo/X505X/proprietary/system/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM)/bin/wfdservice \
     vendor/lenovo/X505X/proprietary/system/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ATT/ATT_profiles.xml \
     vendor/lenovo/X505X/proprietary/system/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ROW/ROW_profiles.xml \
@@ -308,15 +304,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/X505X/proprietary/system/lib64/libstagefright_codecbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_codecbase.so \
     vendor/lenovo/X505X/proprietary/system/lib64/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfdclient.so \
     vendor/lenovo/X505X/proprietary/system/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
-    vendor/lenovo/X505X/proprietary/system/priv-app/WfdService/WfdService.apk:$(TARGET_COPY_OUT_SYSTEM)/priv-app/WfdService/WfdService.apk \
     vendor/lenovo/X505X/proprietary/vendor/Diag.cfg:$(TARGET_COPY_OUT_VENDOR)/Diag.cfg \
-    vendor/lenovo/X505X/proprietary/vendor/app/CACertService/CACertService.apk:$(TARGET_COPY_OUT_VENDOR)/app/CACertService/CACertService.apk \
-    vendor/lenovo/X505X/proprietary/vendor/app/CneApp/CneApp.apk:$(TARGET_COPY_OUT_VENDOR)/app/CneApp/CneApp.apk \
-    vendor/lenovo/X505X/proprietary/vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk:$(TARGET_COPY_OUT_VENDOR)/app/ConnectionSecurityService/ConnectionSecurityService.apk \
-    vendor/lenovo/X505X/proprietary/vendor/app/IWlanService/IWlanService.apk:$(TARGET_COPY_OUT_VENDOR)/app/IWlanService/IWlanService.apk \
-    vendor/lenovo/X505X/proprietary/vendor/app/SSGTelemetryService/SSGTelemetryService.apk:$(TARGET_COPY_OUT_VENDOR)/app/SSGTelemetryService/SSGTelemetryService.apk \
-    vendor/lenovo/X505X/proprietary/vendor/app/TimeService/TimeService.apk:$(TARGET_COPY_OUT_VENDOR)/app/TimeService/TimeService.apk \
-    vendor/lenovo/X505X/proprietary/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk:$(TARGET_COPY_OUT_VENDOR)/app/TrustZoneAccessService/TrustZoneAccessService.apk \
     vendor/lenovo/X505X/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/lenovo/X505X/proprietary/vendor/bin/KmInstallKeybox:$(TARGET_COPY_OUT_VENDOR)/bin/KmInstallKeybox \
     vendor/lenovo/X505X/proprietary/vendor/bin/PktRspTest:$(TARGET_COPY_OUT_VENDOR)/bin/PktRspTest \
@@ -2185,3 +2173,17 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/X505X/proprietary/vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/4_version_update_ecc_table.sql \
     vendor/lenovo/X505X/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql \
     vendor/lenovo/X505X/proprietary/vendor/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+
+PRODUCT_PACKAGES += \
+    WfdService \
+    CACertService \
+    CneApp \
+    ConnectionSecurityService \
+    IWlanService \
+    SSGTelemetryService \
+    TimeService \
+    TrustZoneAccessService \
+    PowerOffAlarm \
+    QtiTelephonyService \
+    ims \
+    qcrilmsgtunnel
